@@ -1,0 +1,514 @@
+:root {
+
+    --background: #f6f7f8;
+    --white: #ffffff;
+
+    --text: #172027;
+    --muted: #69747c;
+
+    --border: #e2e6e8;
+
+    --accent: #285d7a;
+    --accent-dark: #1d455b;
+
+    --shadow:
+        0 24px 70px rgba(20, 30, 36, 0.10);
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(40, 93, 122, 0.07),
+            transparent 35rem
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 70px;
+
+    padding:
+        0
+        clamp(20px, 5vw, 70px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+
+    background:
+        rgba(246, 247, 248, 0.78);
+
+    border-bottom:
+        1px solid rgba(226, 230, 232, 0.75);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.logo {
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+.download {
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    color: var(--accent);
+
+    transition:
+        color 0.2s ease;
+}
+
+.download:hover {
+    color: var(--accent-dark);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    width: min(100%, 1100px);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding:
+        150px
+        30px
+        90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.eyebrow {
+
+    margin: 0 0 14px;
+
+    color: var(--accent);
+
+    font-size: 0.74rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(2.7rem, 7vw, 5.6rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 700;
+}
+
+.intro {
+
+    max-width: 590px;
+
+    margin:
+        25px auto
+        30px;
+
+    color: var(--muted);
+
+    font-size:
+        clamp(1rem, 2vw, 1.15rem);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        12px
+        18px;
+
+    border-radius: 999px;
+
+    background: var(--text);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--accent);
+
+    box-shadow:
+        0 10px 25px
+        rgba(23, 32, 39, 0.16);
+}
+
+
+/* =========================
+   CV
+========================= */
+
+.cv-section {
+
+    padding:
+        90px
+        30px
+        130px;
+}
+
+.heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.heading h2,
+.contact h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(1.8rem, 4vw, 2.8rem);
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+/* CV CARD */
+
+.cv-container {
+
+    width:
+        min(100%, 850px);
+
+    margin: 0 auto;
+
+    padding:
+        clamp(8px, 1.5vw, 16px);
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.cv-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 7px;
+}
+
+
+/* CV BUTTONS */
+
+.cv-actions {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+}
+
+.text-link {
+
+    color: var(--accent);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    padding:
+        90px
+        30px
+        120px;
+
+    text-align: center;
+
+    border-top:
+        1px solid var(--border);
+}
+
+.contact-links {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    color: var(--muted);
+}
+
+.contact-links a {
+
+    color: var(--accent);
+
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    width:
+        min(100%, 1100px);
+
+    margin: 0 auto;
+
+    padding:
+        24px
+        30px
+        35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(24px);
+
+    transition:
+
+        opacity 0.8s ease,
+
+        transform
+        0.8s
+        cubic-bezier(
+            0.2,
+            0.7,
+            0.2,
+            1
+        );
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 62px;
+    }
+
+    .download {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .cv-section {
+        padding-top: 70px;
+    }
+
+    .cv-actions {
+
+        flex-direction: column;
+    }
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+    .button {
+        transition: none;
+    }
+}
